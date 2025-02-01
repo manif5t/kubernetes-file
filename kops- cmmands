@@ -1,0 +1,8 @@
+ kubectl run pod-1 --image=nginx
+ kubectl get pods
+ docker images
+ kubectl delete pod pod-3
+ kubectl delete pod --all
+ kubectl get po pod-1 -o wide
+ kubectl describe pod pod-1
+kubectl get po -o yaml
