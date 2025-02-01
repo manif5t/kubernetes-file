@@ -1,0 +1,24 @@
+1.sudo yum update -y
+2 curl " https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip "     -o "awscliv2.zip"
+3.unzip awscliv2.zip
+4. sudo ./aws/install
+5. vim .bashrc
+6. source .bashrc
+7. aws --version
+8. curl -LO  https://storage.googleapis.com/kubernetes-release/release/$(curl  -s  https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl 
+9.  chmod +x ./kubectl
+10. sudo mv ./kubectl /usr/local/bin/kubectl
+11. kubectl version --client
+12. curl -Lo kops  https://github.com/kubernetes/kops/releases/download/v1.22.2/kops-linux-amd64 
+13. chmod +x kops
+14. sudo mv kops /usr/local/bin/kops
+15. aws configure
+16. export NAME=kops.yourdomain.com
+17. export KOPS_STATE_STORE=s3://kops-state-storage-cluster
+18. aws s3 mb s3://mani
+19. aws s3api put-bucket-versioning --bucket devops181224 --versioning-configuration Status=Enabled
+20. export KOPS_STATE_STORE=s3://devops181224
+21. ssh-keygen
+22. kops create cluster --name mani.k8s.local --zones us-east-1a --master-size t2.medium --node-size t2.micro
+23. kubectl get no
+24. kops update cluster --name mani.k8s.local --yes --admin
