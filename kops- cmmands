@@ -5,4 +5,6 @@
  kubectl delete pod --all
  kubectl get po pod-1 -o wide
  kubectl describe pod pod-1
-kubectl get po -o yaml
+ kubectl get po -o yaml
+ kubectl delete rc fusion5 --cascade=orphan
+ kubectl scale rc fusion5 --replicas 5
