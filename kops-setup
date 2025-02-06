@@ -2,7 +2,7 @@
 2 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"     -o "awscliv2.zip"
 3.unzip awscliv2.zip
 4. sudo ./aws/install
-5. vim .bashrc
+5. vim .bashrc   ====>> export PATH=$PATH:/usr/local/bin
 6. source .bashrc
 7. aws --version
 8. curl -LO  https://storage.googleapis.com/kubernetes-release/release/$(curl  -s  https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl 
