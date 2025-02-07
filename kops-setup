@@ -12,7 +12,7 @@
 12. curl -Lo kops  https://github.com/kubernetes/kops/releases/download/v1.22.2/kops-linux-amd64 
 13. chmod +x kops
 14. sudo mv kops /usr/local/bin/kops
-15. aws configure
+15. aws configure  =====>>>> IAM USER CREATE & GENERATE ACCESS KEY ===>> give policy permissions ===> administrater access 
 16. export NAME=kops.yourdomain.com
 17. export KOPS_STATE_STORE=s3://kops-state-storage-cluster
 18. aws s3 mb s3://mani
